@@ -119,6 +119,10 @@ services:
       
     restart: always
 
+
+RUN DOCKER COMPOSE:
+    docker compose up -d
+
 This setup ensures a smooth user experience while keeping the system secure and efficient. Let me know if you need more details! 
 
 
