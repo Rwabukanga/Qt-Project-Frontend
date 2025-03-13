@@ -1,24 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import RegistrationForm from "./forms/RegistrationForm"; // Import the form from the forms folder
+import LoginForm from "./forms/LoginForm";
+import HomePage from "./pages/HomePage";
+import Dashboard from "./pages/Dashboard";
+import LandingPage from "./pages/LandingPage";
+import UrlShortenerPage from "./pages/UrlShortenerPage";
+import UrlAnalytics from "./pages/UrlAnalytics";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/home" element={<HomePage />} />
+        <Route path="/register" element={<RegistrationForm />} />
+        <Route path="/login" element={<LoginForm />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/shorten" element={<UrlShortenerPage />} />
+        <Route path="/anal" element={<UrlAnalytics />} />
+
+      </Routes>
+    </Router>
   );
 }
 
