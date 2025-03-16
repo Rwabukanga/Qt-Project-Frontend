@@ -24,7 +24,7 @@ const [success, setSuccess] = useState("");
     setSuccess("");
 
     try {
-      const response = await axios.post("http://localhost:3032/auth/register", formData);
+      const response = await axios.post("http://localhost:3033/auth/register", formData);
         setSuccess("User registered successfully!");
         
        navigate("/");

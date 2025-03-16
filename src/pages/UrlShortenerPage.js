@@ -19,7 +19,7 @@ const UrlShortenerPage = () => {
 
             // Make the POST request to the backend
             const response = await axios.post(
-                'http://localhost:3032/url/shorten', // Adjust the URL based on your backend setup
+                'http://localhost:3033/url/shorten', // Adjust the URL based on your backend setup
                 { longUrl }, // Data to send (Long URL)
                 {
                     headers: {

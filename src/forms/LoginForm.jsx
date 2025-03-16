@@ -21,7 +21,7 @@ const LoginForm = () => {
     setError("");
 
     try {
-      const response = await axios.post("http://localhost:3032/auth/login", formData);
+      const response = await axios.post("http://localhost:3033/auth/login", formData);
       
       // Store JWT in localStorage
       localStorage.setItem("token", response.data.token);

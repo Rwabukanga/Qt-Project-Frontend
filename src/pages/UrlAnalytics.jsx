@@ -7,7 +7,7 @@ const UrlAnalytics = ({ shortCode }) => {
 
   useEffect(() => {
     // Fetch URL analytics
-    axios.get(`http://localhost:3032/url/${shortCode}`)
+    axios.get(`http://localhost:3033/url/${shortCode}`)
       .then(response => {
         setAnalytics(response.data.Object);
       })
